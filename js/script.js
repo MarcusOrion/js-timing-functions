@@ -6,14 +6,28 @@ function countdown() {
   alert("Attenzione, ci sei riuscito!");
 }*/
 //     al click su un elemento, cambia il colore dello sfondo dopo un ritardo
-const button = document.getElementById("btn");
+/*const button = document.getElementById("btn");
 button.addEventListener("click", function () {
   setTimeout(function () {
     document.querySelector("body").classList.add("sfondo_blu");
   }, 2500);
-});
+});*/
 //     rendi visibile un testo nascosto dopo alcuni secondi dal caricamento
+/*const clock = setTimeout(countdown, 3000);
+function countdown() {
+  document.querySelector("p").classList.remove("d-none");
+}*/
 //     simula un reindirizzamento: al click su un tasto cambia testo di un paragrafo e ricarica la pagina dopo X secondi
+const button = document
+  .getElementById("btn")
+  .addEventListener("click", function () {
+    document.getElementById("message").textContent =
+      "Stai per venire reindirizzato...";
+    setTimeout(function () {
+      location.reload();
+    }, 3000);
+  });
+
 //     simula uno stato di "caricamento": cambia il testo di un elemento appena cliccato un pulsante e cambialo nuovamente dopo qualche secondo
 //     mostra l'orario corrente aggiornandolo ogni secondo
 //     fai lampeggiare un titolo alternandone il colore ogni mezzo secondo
