@@ -39,7 +39,7 @@ function countdown() {
     }, 3000);
   });*/
 //     mostra l'orario corrente aggiornandolo ogni secondo
-function getTime() {
+/*function getTime() {
   const ora = new Date();
   const hours = ora.getHours().toString().padStart(2, "0");
   const minutes = ora.getMinutes().toString().padStart(2, "0");
@@ -48,8 +48,18 @@ function getTime() {
   document.getElementById("message").textContent =
     `${hours}:${minutes}:${seconds}`;
 }
-setInterval(getTime, 1000);
+setInterval(getTime, 1000);*/
 //     fai lampeggiare un titolo alternandone il colore ogni mezzo secondo
+const titolo = document.getElementById("title");
+
+setInterval(() => {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+
+  titolo.style.color = `rgb(${r}, ${g}, ${b})`;
+}, 500);
+
 //     anima una progress bar aumentando la sua larghezza gradualmente fino al 100%
 //     mostra un nuovo numero casuale ogni X secondi
 //     cambia automaticamente il colore di sfondo della pagina ad intervalli regolari
