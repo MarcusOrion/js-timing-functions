@@ -28,7 +28,7 @@ function countdown() {
     }, 3000);
   });*/
 //     simula uno stato di "caricamento": cambia il testo di un elemento appena cliccato un pulsante e cambialo nuovamente dopo qualche secondo
-const button = document
+/*const button = document
   .getElementById("btn")
   .addEventListener("click", function () {
     document.getElementById("message").textContent =
@@ -37,8 +37,18 @@ const button = document
       document.getElementById("message").textContent =
         "Questo testo è stato nuovamente cambiato";
     }, 3000);
-  });
+  });*/
 //     mostra l'orario corrente aggiornandolo ogni secondo
+function getTime() {
+  const ora = new Date();
+  const hours = ora.getHours().toString().padStart(2, "0");
+  const minutes = ora.getMinutes().toString().padStart(2, "0");
+  const seconds = ora.getSeconds().toString().padStart(2, "0");
+
+  document.getElementById("message").textContent =
+    `${hours}:${minutes}:${seconds}`;
+}
+setInterval(getTime, 1000);
 //     fai lampeggiare un titolo alternandone il colore ogni mezzo secondo
 //     anima una progress bar aumentando la sua larghezza gradualmente fino al 100%
 //     mostra un nuovo numero casuale ogni X secondi
