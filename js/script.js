@@ -1,11 +1,17 @@
 // Utilizzare le timing functions di JavaScript per risolvere le seguenti traccie:
 
 //     mostra un alert 3 secondi dopo il caricamento della pagina
-const clock = setTimeout(countdown, 3000);
+/*const clock = setTimeout(countdown, 3000);
 function countdown() {
   alert("Attenzione, ci sei riuscito!");
-}
+}*/
 //     al click su un elemento, cambia il colore dello sfondo dopo un ritardo
+const button = document.getElementById("btn");
+button.addEventListener("click", function () {
+  setTimeout(function () {
+    document.querySelector("body").classList.add("sfondo_blu");
+  }, 2500);
+});
 //     rendi visibile un testo nascosto dopo alcuni secondi dal caricamento
 //     simula un reindirizzamento: al click su un tasto cambia testo di un paragrafo e ricarica la pagina dopo X secondi
 //     simula uno stato di "caricamento": cambia il testo di un elemento appena cliccato un pulsante e cambialo nuovamente dopo qualche secondo
