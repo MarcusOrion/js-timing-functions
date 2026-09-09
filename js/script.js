@@ -50,7 +50,7 @@ function countdown() {
 }
 setInterval(getTime, 1000);*/
 //     fai lampeggiare un titolo alternandone il colore ogni mezzo secondo
-const titolo = document.getElementById("title");
+/*const titolo = document.getElementById("title");
 
 setInterval(() => {
   const r = Math.floor(Math.random() * 256);
@@ -58,8 +58,16 @@ setInterval(() => {
   const b = Math.floor(Math.random() * 256);
 
   titolo.style.color = `rgb(${r}, ${g}, ${b})`;
-}, 500);
-
+}, 500);*/
 //     anima una progress bar aumentando la sua larghezza gradualmente fino al 100%
+const progressBar = document.getElementById("progressBar");
+let width = 0;
+const interval = setInterval(() => {
+  width++;
+  progressBar.style.width = `${width}%`;
+  if (width >= 100) {
+    clearInterval(interval);
+  }
+}, 50);
 //     mostra un nuovo numero casuale ogni X secondi
 //     cambia automaticamente il colore di sfondo della pagina ad intervalli regolari
