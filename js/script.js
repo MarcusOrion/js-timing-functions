@@ -18,7 +18,7 @@ function countdown() {
   document.querySelector("p").classList.remove("d-none");
 }*/
 //     simula un reindirizzamento: al click su un tasto cambia testo di un paragrafo e ricarica la pagina dopo X secondi
-const button = document
+/*const button = document
   .getElementById("btn")
   .addEventListener("click", function () {
     document.getElementById("message").textContent =
@@ -26,9 +26,18 @@ const button = document
     setTimeout(function () {
       location.reload();
     }, 3000);
-  });
-
+  });*/
 //     simula uno stato di "caricamento": cambia il testo di un elemento appena cliccato un pulsante e cambialo nuovamente dopo qualche secondo
+const button = document
+  .getElementById("btn")
+  .addEventListener("click", function () {
+    document.getElementById("message").textContent =
+      "Questo testo è stato appena cambiato";
+    setTimeout(function () {
+      document.getElementById("message").textContent =
+        "Questo testo è stato nuovamente cambiato";
+    }, 3000);
+  });
 //     mostra l'orario corrente aggiornandolo ogni secondo
 //     fai lampeggiare un titolo alternandone il colore ogni mezzo secondo
 //     anima una progress bar aumentando la sua larghezza gradualmente fino al 100%
